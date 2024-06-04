@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encuestas</title>
+</head>
+<body>
+  <h1>Jose Valle Encuesta APGAR FAMILIAR</h1>
+  <form id="encuestaApgarForm">
+
+    <fieldset>
+      <legend>Pregunta 1: Me siento satisfecho (a) con la ayuda que recibo de mi familia cuando tengo algún problema y/o necesidad.</legend>
+      <label><input type="radio" name="pregunta1" value="0"> Nunca</label>
+      <label><input type="radio" name="pregunta1" value="1"> Casi nunca</label>
+      <label><input type="radio" name="pregunta1" value="2"> Algunas veces</label>
+      <label><input type="radio" name="pregunta1" value="3"> Casi siempre</label>
+      <label><input type="radio" name="pregunta1" value="4"> Siempre</label>
+    </fieldset>
+
+    <!-- Pregunta 2 -->
+    <fieldset>
+      <legend>Pregunta 2: Me siento satisfecha (o) con la forma en que mi familia habla de las cosas y comparte los problemas conmigo y/o necesidad.</legend>
+      <label><input type="radio" name="pregunta2" value="0"> Nunca</label>
+      <label><input type="radio" name="pregunta2" value="1"> Casi nunca</label>
+      <label><input type="radio" name="pregunta2" value="2"> Algunas veces</label>
+      <label><input type="radio" name="pregunta2" value="3"> Casi siempre</label>
+      <label><input type="radio" name="pregunta2" value="4"> Siempre</label>
+    </fieldset>
+
+    <!-- Pregunta 3 -->
+    <fieldset>
+      <legend>Pregunta 3: Me siento satisfecha (o) con la forma como mi familia acepta y apoya mis deseos de emprender nuevas actividades</legend>
+      <label><input type="radio" name="pregunta3" value="0"> Nunca</label>
+      <label><input type="radio" name="pregunta3" value="1"> Casi nunca</label>
+      <label><input type="radio" name="pregunta3" value="2"> Algunas veces</label>
+      <label><input type="radio" name="pregunta3" value="3"> Casi siempre</label>
+      <label><input type="radio" name="pregunta3" value="4"> Siempre</label>
+    </fieldset>
+
+    <!-- Pregunta 4 -->
+    <fieldset>
+      <legend>Pregunta 4: Me siento satisfecha (o) con la forma como mi familia expresa afecto y responde a mis emociones como rabia, tristeza o amor</legend>
+      <label><input type="radio" name="pregunta4" value="0"> Nunca</label>
+      <label><input type="radio" name="pregunta4" value="1"> Casi nunca</label>
+      <label><input type="radio" name="pregunta4" value="2"> Algunas veces</label>
+      <label><input type="radio" name="pregunta4" value="3"> Casi siempre</label>
+      <label><input type="radio" name="pregunta4" value="4"> Siempre</label>
+    </fieldset>
+
+    <!-- Pregunta 5 -->
+    <fieldset>
+      <legend>Pregunta 5: Me siento satisfecha (o) con la manera como compartimos en mi familia:</legend>
+      <label><input type="radio" name="pregunta5" value="0"> Nunca</label>
+      <label><input type="radio" name="pregunta5" value="1"> Casi nunca</label>
+      <label><input type="radio" name="pregunta5" value="2"> Algunas veces</label>
+      <label><input type="radio" name="pregunta5" value="3"> Casi siempre</label>
+      <label><input type="radio" name="pregunta5" value="4"> Siempre</label>
+    </fieldset>
+
+
+    <!-- Pregunta 6 -->
+<fieldset>
+      <legend>Pregunta 6: Me siento satisfecha (o) con la manera como compartimos el tiempo para estar juntos en mi familia:  </legend>
+      <label><input type="radio" name="pregunta6" value="0"> Nunca</label>
+      <label><input type="radio" name="pregunta6" value="1"> Casi nunca</label>
+      <label><input type="radio" name="pregunta6" value="2"> Algunas veces</label>
+      <label><input type="radio" name="pregunta6" value="3"> Casi siempre</label>
+      <label><input type="radio" name="pregunta6" value="4"> Siempre</label>
+    </fieldset>
+
+    <!-- Pregunta 7 -->
+<fieldset>
+      <legend>Pregunta 7: Me siento satisfecha (o) con la manera como compartimos los espacios en la casa en mi familia:  </legend>
+      <label><input type="radio" name="pregunta7" value="0"> Nunca</label>
+      <label><input type="radio" name="pregunta7" value="1"> Casi nunca</label>
+      <label><input type="radio" name="pregunta7" value="2"> Algunas veces</label>
+      <label><input type="radio" name="pregunta7" value="3"> Casi siempre</label>
+      <label><input type="radio" name="pregunta7" value="4"> Siempre</label>
+    </fieldset>
+
+    <!-- Pregunta 8 -->
+<fieldset>
+      <legend>Pregunta 8: Me siento satisfecha (o) con la manera como compartimos El dinero en mi familia:  </legend>
+      <label><input type="radio" name="pregunta8" value="0"> Nunca</label>
+      <label><input type="radio" name="pregunta8" value="1"> Casi nunca</label>
+      <label><input type="radio" name="pregunta8" value="2"> Algunas veces</label>
+      <label><input type="radio" name="pregunta8" value="3"> Casi siempre</label>
+      <label><input type="radio" name="pregunta8" value="4"> Siempre</label>
+    </fieldset>
+
+  <button type="button" onclick="calcularPuntuacion('apgar')">Calificar APGAR</button>
+  </form>
+  <div id="resultadoApgar"></div>
+    
+
+ <h2>Jose Valle Escala de Sobrecarga del Cuidador de Zarit</h2>
+
+ <form id="encuestaZaritForm">
+    <!-- Preguntas -->
+    <fieldset>
+      <legend>Pregunta 1¿Piensa que su familiar solicita más ayuda de la que realmente necesita?</legend>
+      <label><input type="radio" name="pregunta1" value="1"> NUNCA</label>
+      <label><input type="radio" name="pregunta1" value="2"> RARA VEZ</label>
+      <label><input type="radio" name="pregunta1" value="3"> ALGUNAS VECES</label>
+      <label><input type="radio" name="pregunta1" value="4"> BASTANTES VECES</label>
+      <label><input type="radio" name="pregunta1" value="5"> CASI SIEMPRE</label>
+    </fieldset>
+
+<!-- Pregunta 2 -->
+<fieldset>
+      <legend>Pregunta 2¿Piensa que debido al tiempo que dedica a su familiar ya no dispone de tiempo suficiente para usted?</legend>
+      <label><input type="radio" name="pregunta2" value="1"> NUNCA</label>
+      <label><input type="radio" name="pregunta2" value="2"> RARA VEZ</label>
+      <label><input type="radio" name="pregunta2" value="3"> ALGUNAS VECES</label>
+      <label><input type="radio" name="pregunta2" value="4"> BASTANTES VECES</label>
+      <label><input type="radio" name="pregunta2" value="5"> CASI SIEMPRE</label>
+    </fieldset>
+
+<!-- Pregunta 3 -->
+<fieldset>
+    <legend>Pregunta 3¿Se siente agobiado por intentar compatibilizar el cuidado de su familiar con otras responsabilidades (trabajo, familia)?</legend>
+    <label><input type="radio" name="pregunta3" value="1"> NUNCA</label>
+    <label><input type="radio" name="pregunta3" value="2"> RARA VEZ</label>
+    <label><input type="radio" name="pregunta3" value="3"> ALGUNAS VECES</label>
+    <label><input type="radio" name="pregunta3" value="4"> BASTANTES VECES</label>
+    <label><input type="radio" name="pregunta3" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+<!-- Pregunta 4 -->
+<fieldset>
+  <legend>Pregunta 4¿Se siente vergüenza por la conducta de su familiar?</legend>
+  <label><input type="radio" name="pregunta4" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta4" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta4" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta4" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta4" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+<!-- Pregunta 5 -->
+<fieldset>
+  <legend>Pregunta 5¿Se siente enfadado cuando está cerca de su familiar?</legend>
+  <label><input type="radio" name="pregunta5" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta5" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta5" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta5" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta5" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+<!-- Pregunta 6 -->
+<fieldset>
+  <legend>Pregunta 6¿Cree que la situación actual afecta negativamente la relación que Ud tiene con otros miembros de su familia?</legend>
+  <label><input type="radio" name="pregunta6" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta6" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta6" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta6" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta6" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+<!-- Pregunta 7 -->
+<fieldset>
+  <legend>Pregunta 7¿Tiene miedo por el futuro de su familiar?</legend>
+  <label><input type="radio" name="pregunta7" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta7" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta7" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta7" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta7" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+
+<!-- Pregunta 8 -->
+<fieldset>
+  <legend>Pregunta 8¿Piensa que su familiar depende de usted?</legend>
+  <label><input type="radio" name="pregunta8" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta8" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta8" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta8" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta8" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+<!-- Pregunta 9 -->
+<fieldset>
+  <legend>Pregunta 9¿Piensa que su salud ha empeorado debido a tener que cuidar a su familiar?</legend>
+  <label><input type="radio" name="pregunta9" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta9" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta9" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta9" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta9" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+<!-- Pregunta 10 -->
+<fieldset>
+  <legend>Pregunta 10¿Se siente tenso cuanto está cerca de su familiar?</legend>
+  <label><input type="radio" name="pregunta10" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta10" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta10" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta10" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta10" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+<!-- Pregunta 11 -->
+<fieldset>
+  <legend>Pregunta 11¿Piensa que no tiene tanta intimidad como le gustaría debido a tener que cuidar a su familiar?</legend>
+  <label><input type="radio" name="pregunta11" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta11" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta11" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta11" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta11" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+<!-- Pregunta 12 -->
+<fieldset>
+  <legend>Pregunta 12¿Siente que su vida social se ha visto afectada negativamente por tener que cuidar a su familiar?</legend>
+  <label><input type="radio" name="pregunta12" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta12" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta12" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta12" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta12" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+<!-- Pregunta 13 -->
+<fieldset>
+  <legend>Pregunta 13¿Se siente incómodo por distanciarse de sus amistades debido a tener que cuidar de su familiar?</legend>
+  <label><input type="radio" name="pregunta13" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta13" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta13" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta13" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta13" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+<!-- Pregunta 14 -->
+<fieldset>
+  <legend>Pregunta 14¿Piensa que su familiar le considera a usted la única persona que le puede cuidar?</legend>
+  <label><input type="radio" name="pregunta14" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta14" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta14" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta14" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta14" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+
+<!-- Pregunta 15 -->
+<fieldset>
+  <legend>Pregunta 15¿Piensa que no tiene suficientes ingresos económicos para los gastos de cuidar a su familiar, además de sus otros gastos?</legend>
+  <label><input type="radio" name="pregunta15" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta15" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta15" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta15" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta15" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+<!-- Pregunta 16 -->
+<fieldset>
+  <legend>Pregunta 16¿Piensa que no será capaz de cuidar a su familiar por mucho más tiempo?</legend>
+  <label><input type="radio" name="pregunta16" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta16" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta16" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta16" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta16" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+<!-- Pregunta 17 -->
+<fieldset>
+  <legend>Pregunta 17¿Siente que ha perdido el control de su vida desde que comenzó la enfermedad de su familiar?</legend>
+  <label><input type="radio" name="pregunta17" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta17" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta17" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta17" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta17" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+<!-- Pregunta 18 -->
+<fieldset>
+  <legend>Pregunta 18¿Desearía poder dejar el cuidado de su familiar a otra persona?</legend>
+  <label><input type="radio" name="pregunta18" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta18" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta18" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta18" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta18" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+<!-- Pregunta 19 -->
+<fieldset>
+  <legend>Pregunta 19¿Se siente indeciso sobre qué hacer con su familiar?</legend>
+  <label><input type="radio" name="pregunta19" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta19" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta19" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta19" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta19" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+<!-- Pregunta 20 -->
+<fieldset>
+  <legend>Pregunta 20¿Piensa que debería hacer más por su familiar?</legend>
+  <label><input type="radio" name="pregunta20" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta20" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta20" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta20" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta20" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+<!-- Pregunta 21 -->
+<fieldset>
+  <legend>Pregunta 21¿Piensa que podría cuidar mejor a su familiar?</legend>
+  <label><input type="radio" name="pregunta21" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta21" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta21" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta21" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta21" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+<!-- Pregunta 22 -->
+<fieldset>
+  <legend>Pregunta 22Globalmente ¿Qué grado de “carga” experimenta por el hecho de cuidar a su familiar?</legend>
+  <label><input type="radio" name="pregunta22" value="1"> NUNCA</label>
+  <label><input type="radio" name="pregunta22" value="2"> RARA VEZ</label>
+  <label><input type="radio" name="pregunta22" value="3"> ALGUNAS VECES</label>
+  <label><input type="radio" name="pregunta22" value="4"> BASTANTES VECES</label>
+  <label><input type="radio" name="pregunta22" value="5"> CASI SIEMPRE</label>
+</fieldset>
+
+ <!-- Botón para calcular -->
+     <button type="button" onclick="calcularPuntuacion('zarit')">Calificar Zarit</button>
+  </form>
+  <div id="resultadoZarit"></div>
+
+  <script>
+    function calcularPuntuacion(encuesta) {
+      var total = 0;
+      var form;
+      if (encuesta === 'apgar') {
+        form = document.getElementById('encuestaApgarForm');
+      } else if (encuesta === 'zarit') {
+        form = document.getElementById('encuestaZaritForm');
+      }
+      var radios = form.querySelectorAll('input[name^="pregunta"]:checked');
+      radios.forEach(function(radio) {
+        total += parseInt(radio.value);
+      });
+      var diagnostico = obtenerDiagnostico(total, encuesta);
+      if (encuesta === 'apgar') {
+        document.getElementById('resultadoApgar').innerText = 'Tu puntuación total APGAR es: ' + total + '\nDiagnóstico APGAR: ' + diagnostico;
+      } else if (encuesta === 'zarit') {
+        document.getElementById('resultadoZarit').innerText = 'Tu puntuación total Zarit es: ' + total + '\nDiagnóstico Zarit: ' + diagnostico;
+      }
+    }
+
+    function obtenerDiagnostico(puntaje, encuesta) {
+      if (encuesta === 'apgar') {
+        if (puntaje >= 18) {
+          return 'Buen Funcionamiento Familiar';
+        } else if (puntaje >= 14 && puntaje <= 17) {
+          return 'Disfunción Familiar Leve';
+        } else if (puntaje >= 10 && puntaje <= 13) {
+          return 'Disfunción Familiar Moderada';
+        } else {
+          return 'Disfunción Familiar Severa';
+        }
+      } else if (encuesta === 'zarit') {
+        if (puntaje < 46) {
+          return 'Ausencia de sobrecarga';
+        } else if (puntaje <= 55) {
+          return 'Sobrecarga ligera';
+        } else {
+          return 'Sobrecarga intensa';
+        }
+      }
+    }
+  </script>
+</body>
+</html>
