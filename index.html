@@ -324,6 +324,9 @@
   </form>
   <div id="resultadoZarit"></div>
 
+ <!-- Botón para borrar respuestas -->
+  <button type="button" onclick="borrarEncuestas()">Borrar Respuestas</button>
+
   <script>
     function calcularPuntuacion(encuesta) {
       var total = 0;
@@ -345,26 +348,33 @@
       }
     }
 
-    function obtenerDiagnostico(puntaje, encuesta) {
+    function obtenerDiagnostico(total, encuesta) {
+      var diagnostico = '';
       if (encuesta === 'apgar') {
-        if (puntaje >= 18) {
-          return 'Buen Funcionamiento Familiar';
-        } else if (puntaje >= 14 && puntaje <= 17) {
-          return 'Disfunción Familiar Leve';
-        } else if (puntaje >= 10 && puntaje <= 13) {
-          return 'Disfunción Familiar Moderada';
+        if (total >= 18) {
+          diagnostico = 'Alta funcionalidad';
+        } else if (total >= 10) {
+          diagnostico = 'Disfunción leve';
         } else {
-          return 'Disfunción Familiar Severa';
+          diagnostico = 'Disfunción severa';
         }
       } else if (encuesta === 'zarit') {
-        if (puntaje < 46) {
-          return 'Ausencia de sobrecarga';
-        } else if (puntaje <= 55) {
-          return 'Sobrecarga ligera';
+        if (total <= 46) {
+          diagnostico = 'Sin sobrecarga';
+        } else if (total <= 56) {
+          diagnostico = 'Sobrecarga leve';
         } else {
-          return 'Sobrecarga intensa';
+          diagnostico = 'Sobrecarga intensa';
         }
       }
+      return diagnostico;
+    }
+
+    function borrarEncuestas() {
+      document.getElementById('encuestaApgarForm').reset();
+      document.getElementById('encuestaZaritForm').reset();
+      document.getElementById('resultadoApgar').innerText = '';
+      document.getElementById('resultadoZarit').innerText = '';
     }
   </script>
 </body>
