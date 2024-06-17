@@ -4,94 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Encuestas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    fieldset {
+      margin-bottom: 15px;
+    }
+    legend {
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <h1>Jose Valle Encuesta APGAR FAMILIAR</h1>
-  <form id="encuestaApgarForm">
 
-    <fieldset>
-      <legend>Pregunta 1: Me siento satisfecho (a) con la ayuda que recibo de mi familia cuando tengo algún problema y/o necesidad.</legend>
-      <label><input type="radio" name="pregunta1" value="0"> Nunca</label>
-      <label><input type="radio" name="pregunta1" value="1"> Casi nunca</label>
-      <label><input type="radio" name="pregunta1" value="2"> Algunas veces</label>
-      <label><input type="radio" name="pregunta1" value="3"> Casi siempre</label>
-      <label><input type="radio" name="pregunta1" value="4"> Siempre</label>
-    </fieldset>
+<div class="container">
+    <h1>Encuesta APGAR Familiar</h1>
+    <form id="encuestaApgarForm">
+      <!-- Pregunta 1 -->
+      <fieldset>
+        <legend>¿Estás satisfecho con la ayuda que recibes de tu familia cuando tienes problemas?</legend>
+        <label><input type="radio" name="pregunta1" value="0"> Casi nunca</label>
+        <label><input type="radio" name="pregunta1" value="1"> A veces</label>
+        <label><input type="radio" name="pregunta1" value="2"> Casi siempre</label>
+      </fieldset>
 
-    <!-- Pregunta 2 -->
-    <fieldset>
-      <legend>Pregunta 2: Me siento satisfecha (o) con la forma en que mi familia habla de las cosas y comparte los problemas conmigo y/o necesidad.</legend>
-      <label><input type="radio" name="pregunta2" value="0"> Nunca</label>
-      <label><input type="radio" name="pregunta2" value="1"> Casi nunca</label>
-      <label><input type="radio" name="pregunta2" value="2"> Algunas veces</label>
-      <label><input type="radio" name="pregunta2" value="3"> Casi siempre</label>
-      <label><input type="radio" name="pregunta2" value="4"> Siempre</label>
-    </fieldset>
+      <!-- Pregunta 2 -->
+      <fieldset>
+        <legend>¿Conversan entre ustedes los problemas que tienen en la casa?</legend>
+        <label><input type="radio" name="pregunta2" value="0"> Casi nunca</label>
+        <label><input type="radio" name="pregunta2" value="1"> A veces</label>
+        <label><input type="radio" name="pregunta2" value="2"> Casi siempre</label>
+      </fieldset>
 
-    <!-- Pregunta 3 -->
-    <fieldset>
-      <legend>Pregunta 3: Me siento satisfecha (o) con la forma como mi familia acepta y apoya mis deseos de emprender nuevas actividades</legend>
-      <label><input type="radio" name="pregunta3" value="0"> Nunca</label>
-      <label><input type="radio" name="pregunta3" value="1"> Casi nunca</label>
-      <label><input type="radio" name="pregunta3" value="2"> Algunas veces</label>
-      <label><input type="radio" name="pregunta3" value="3"> Casi siempre</label>
-      <label><input type="radio" name="pregunta3" value="4"> Siempre</label>
-    </fieldset>
+      <!-- Pregunta 3 -->
+      <fieldset>
+        <legend>¿Las decisiones importantes se toman en conjunto en la familia?</legend>
+        <label><input type="radio" name="pregunta3" value="0"> Casi nunca</label>
+        <label><input type="radio" name="pregunta3" value="1"> A veces</label>
+        <label><input type="radio" name="pregunta3" value="2"> Casi siempre</label>
+      </fieldset>
 
-    <!-- Pregunta 4 -->
-    <fieldset>
-      <legend>Pregunta 4: Me siento satisfecha (o) con la forma como mi familia expresa afecto y responde a mis emociones como rabia, tristeza o amor</legend>
-      <label><input type="radio" name="pregunta4" value="0"> Nunca</label>
-      <label><input type="radio" name="pregunta4" value="1"> Casi nunca</label>
-      <label><input type="radio" name="pregunta4" value="2"> Algunas veces</label>
-      <label><input type="radio" name="pregunta4" value="3"> Casi siempre</label>
-      <label><input type="radio" name="pregunta4" value="4"> Siempre</label>
-    </fieldset>
+      <!-- Pregunta 4 -->
+      <fieldset>
+        <legend>Los fines de semana son compartidos por todos en la casa?</legend>
+        <label><input type="radio" name="pregunta4" value="0"> Casi nunca</label>
+        <label><input type="radio" name="pregunta4" value="1"> A veces</label>
+        <label><input type="radio" name="pregunta4" value="2"> Casi siempre</label>
+      </fieldset>
 
-    <!-- Pregunta 5 -->
-    <fieldset>
-      <legend>Pregunta 5: Me siento satisfecha (o) con la manera como compartimos en mi familia:</legend>
-      <label><input type="radio" name="pregunta5" value="0"> Nunca</label>
-      <label><input type="radio" name="pregunta5" value="1"> Casi nunca</label>
-      <label><input type="radio" name="pregunta5" value="2"> Algunas veces</label>
-      <label><input type="radio" name="pregunta5" value="3"> Casi siempre</label>
-      <label><input type="radio" name="pregunta5" value="4"> Siempre</label>
-    </fieldset>
+      <!-- Pregunta 5 -->
+      <fieldset>
+        <legend>¿Sientes que tu familia te quiere?</legend>
+        <label><input type="radio" name="pregunta5" value="0"> Casi nunca</label>
+        <label><input type="radio" name="pregunta5" value="1"> A veces</label>
+        <label><input type="radio" name="pregunta5" value="2"> Casi siempre</label>
+      </fieldset>
 
-
-    <!-- Pregunta 6 -->
-<fieldset>
-      <legend>Pregunta 6: Me siento satisfecha (o) con la manera como compartimos el tiempo para estar juntos en mi familia:  </legend>
-      <label><input type="radio" name="pregunta6" value="0"> Nunca</label>
-      <label><input type="radio" name="pregunta6" value="1"> Casi nunca</label>
-      <label><input type="radio" name="pregunta6" value="2"> Algunas veces</label>
-      <label><input type="radio" name="pregunta6" value="3"> Casi siempre</label>
-      <label><input type="radio" name="pregunta6" value="4"> Siempre</label>
-    </fieldset>
-
-    <!-- Pregunta 7 -->
-<fieldset>
-      <legend>Pregunta 7: Me siento satisfecha (o) con la manera como compartimos los espacios en la casa en mi familia:  </legend>
-      <label><input type="radio" name="pregunta7" value="0"> Nunca</label>
-      <label><input type="radio" name="pregunta7" value="1"> Casi nunca</label>
-      <label><input type="radio" name="pregunta7" value="2"> Algunas veces</label>
-      <label><input type="radio" name="pregunta7" value="3"> Casi siempre</label>
-      <label><input type="radio" name="pregunta7" value="4"> Siempre</label>
-    </fieldset>
-
-    <!-- Pregunta 8 -->
-<fieldset>
-      <legend>Pregunta 8: Me siento satisfecha (o) con la manera como compartimos El dinero en mi familia:  </legend>
-      <label><input type="radio" name="pregunta8" value="0"> Nunca</label>
-      <label><input type="radio" name="pregunta8" value="1"> Casi nunca</label>
-      <label><input type="radio" name="pregunta8" value="2"> Algunas veces</label>
-      <label><input type="radio" name="pregunta8" value="3"> Casi siempre</label>
-      <label><input type="radio" name="pregunta8" value="4"> Siempre</label>
-    </fieldset>
-
-  <button type="button" onclick="calcularPuntuacion('apgar')">Calificar APGAR</button>
-  </form>
-  <div id="resultadoApgar"></div>
+      <button type="button" onclick="calcularPuntuacion('apgar')">Calificar APGAR</button>
+    </form>
+    <div id="resultadoApgar"></div>
     
 
  <h2>Jose Valle Escala de Sobrecarga del Cuidador de Zarit</h2>
@@ -321,60 +303,34 @@
 
  <!-- Botón para calcular -->
      <button type="button" onclick="calcularPuntuacion('zarit')">Calificar Zarit</button>
-  </form>
-  <div id="resultadoZarit"></div>
-
- <!-- Botón para borrar respuestas -->
-  <button type="button" onclick="borrarEncuestas()">Borrar Respuestas</button>
+    </form>
+    <div id="resultadoZarit"></div>
+  </div>
 
   <script>
     function calcularPuntuacion(encuesta) {
-      var total = 0;
-      var form;
-      if (encuesta === 'apgar') {
-        form = document.getElementById('encuestaApgarForm');
-      } else if (encuesta === 'zarit') {
-        form = document.getElementById('encuestaZaritForm');
+      let total = 0;
+      let preguntas = 0;
+      const form = document.getElementById(`encuesta${capitalize(encuesta)}Form`);
+      const resultadoDiv = document.getElementById(`resultado${capitalize(encuesta)}`);
+
+      const radios = form.querySelectorAll('input[type="radio"]:checked');
+
+      if (radios.length === 0) {
+        resultadoDiv.innerHTML = `<p style="color: red;">Por favor, responde todas las preguntas.</p>`;
+        return;
       }
-      var radios = form.querySelectorAll('input[name^="pregunta"]:checked');
-      radios.forEach(function(radio) {
+
+      radios.forEach(radio => {
         total += parseInt(radio.value);
+        preguntas++;
       });
-      var diagnostico = obtenerDiagnostico(total, encuesta);
-      if (encuesta === 'apgar') {
-        document.getElementById('resultadoApgar').innerText = 'Tu puntuación total APGAR es: ' + total + '\nDiagnóstico APGAR: ' + diagnostico;
-      } else if (encuesta === 'zarit') {
-        document.getElementById('resultadoZarit').innerText = 'Tu puntuación total Zarit es: ' + total + '\nDiagnóstico Zarit: ' + diagnostico;
-      }
+
+      resultadoDiv.innerHTML = `<p>La puntuación total de la encuesta ${encuesta.toUpperCase()} es: ${total}</p>`;
     }
 
-    function obtenerDiagnostico(total, encuesta) {
-      var diagnostico = '';
-      if (encuesta === 'apgar') {
-        if (total >= 18) {
-          diagnostico = 'Alta funcionalidad';
-        } else if (total >= 10) {
-          diagnostico = 'Disfunción leve';
-        } else {
-          diagnostico = 'Disfunción severa';
-        }
-      } else if (encuesta === 'zarit') {
-        if (total <= 46) {
-          diagnostico = 'Sin sobrecarga';
-        } else if (total <= 56) {
-          diagnostico = 'Sobrecarga leve';
-        } else {
-          diagnostico = 'Sobrecarga intensa';
-        }
-      }
-      return diagnostico;
-    }
-
-    function borrarEncuestas() {
-      document.getElementById('encuestaApgarForm').reset();
-      document.getElementById('encuestaZaritForm').reset();
-      document.getElementById('resultadoApgar').innerText = '';
-      document.getElementById('resultadoZarit').innerText = '';
+    function capitalize(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
     }
   </script>
 </body>
