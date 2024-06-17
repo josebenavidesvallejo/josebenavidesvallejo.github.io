@@ -1,28 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Encuestas</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
     .container {
-      max-width: 600px;
-      margin: 50px auto;
+      max-width: 800px;
+      margin: 0 auto;
       padding: 20px;
+      border: 1px solid #ccc;
       background-color: #f9f9f9;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    fieldset {
-      margin-bottom: 15px;
+    .buttons {
+      margin-bottom: 10px;
+      text-align: center;
     }
-    legend {
-      font-weight: bold;
+    button[type="button"] {
+      margin-right: 10px;
     }
   </style>
 </head>
@@ -71,14 +66,17 @@
         <label><input type="radio" name="pregunta5" value="2"> Casi siempre</label>
       </fieldset>
 
-      <button type="button" onclick="calcularPuntuacion('apgar')">Calificar APGAR</button>
+     <div class="buttons">
+        <button type="button" onclick="calcularPuntuacion('apgar')">Calificar Apgar</button>
+        <button type="button" onclick="limpiarEncuesta('apgar')">Limpiar</button>
+      </div>
     </form>
     <div id="resultadoApgar"></div>
     
 
- <h2>Jose Valle Escala de Sobrecarga del Cuidador de Zarit</h2>
+  <h2>Jose Valle Escala de Sobrecarga del Cuidador de Zarit</h2>
 
- <form id="encuestaZaritForm">
+    <form id="encuestaZaritForm">
     <!-- Preguntas -->
     <fieldset>
       <legend>Pregunta 1¿Piensa que su familiar solicita más ayuda de la que realmente necesita?</legend>
@@ -302,36 +300,79 @@
 </fieldset>
 
  <!-- Botón para calcular -->
-     <button type="button" onclick="calcularPuntuacion('zarit')">Calificar Zarit</button>
-    </form>
-    <div id="resultadoZarit"></div>
-  </div>
+      <div class="buttons">
+      <button type="button" onclick="calcularPuntuacion('zarit')">Calificar Zarit</button>
+    </div>
+  </form>
+  <div id="resultadoZarit"></div>
+</div>
 
-  <script>
-    function calcularPuntuacion(encuesta) {
-      let total = 0;
-      let preguntas = 0;
-      const form = document.getElementById(`encuesta${capitalize(encuesta)}Form`);
-      const resultadoDiv = document.getElementById(`resultado${capitalize(encuesta)}`);
+<div class="buttons">
+  <button type="button" onclick="limpiarEncuestas()">Limpiar Todo</button>
+</div>
 
-      const radios = form.querySelectorAll('input[type="radio"]:checked');
+<script>
+  function calcularPuntuacion(encuesta) {
+    let total = 0;
+    let preguntas = 0;
+    const form = document.getElementById(`encuesta${capitalize(encuesta)}Form`);
+    const resultadoDiv = document.getElementById(`resultado${capitalize(encuesta)}`);
 
-      if (radios.length === 0) {
-        resultadoDiv.innerHTML = `<p style="color: red;">Por favor, responde todas las preguntas.</p>`;
-        return;
+    const radios = form.querySelectorAll('input[type="radio"]:checked');
+
+    if (radios.length === 0) {
+      resultadoDiv.innerHTML = `<p style="color: red;">Por favor, responde todas las preguntas.</p>`;
+      return;
+    }
+
+    radios.forEach(radio => {
+      total += parseInt(radio.value);
+      preguntas++;
+    });
+
+    let riesgo = '';
+
+    if (encuesta === 'apgar') {
+      if (total <= 4) {
+        riesgo = 'Disfunción severa';
+      } else if (total <= 6) {
+        riesgo = 'Disfunción moderada';
+      } else {
+        riesgo = 'Funcionalidad familiar normal';
       }
-
-      radios.forEach(radio => {
-        total += parseInt(radio.value);
-        preguntas++;
-      });
-
-      resultadoDiv.innerHTML = `<p>La puntuación total de la encuesta ${encuesta.toUpperCase()} es: ${total}</p>`;
+    } else if (encuesta === 'zarit') {
+      if (total < 47) {
+        riesgo = 'Sobrecarga ligera';
+      } else if (total <= 55) {
+        riesgo = 'Sobrecarga moderada';
+      } else {
+        riesgo = 'Sobrecarga intensa';
+      }
     }
 
-    function capitalize(str) {
-      return str.charAt(0).toUpperCase() + str.slice(1);
-    }
-  </script>
+    resultadoDiv.innerHTML = `<p>La puntuación total de la encuesta ${encuesta.toUpperCase()} es: ${total}. Nivel de riesgo: ${riesgo}.</p>`;
+  }
+
+  function limpiarEncuesta(encuesta) {
+    const form = document.getElementById(`encuesta${capitalize(encuesta)}Form`);
+    const resultadoDiv = document.getElementById(`resultado${capitalize(encuesta)}`);
+
+    form.reset();
+    resultadoDiv.innerHTML = '';
+  }
+
+  function limpiarEncuestas() {
+    const forms = document.querySelectorAll('form');
+    const resultados = document.querySelectorAll('div[id^="resultado"]');
+
+    forms.forEach(form => form.reset());
+    resultados.forEach(resultado => resultado.innerHTML = '');
+  }
+
+  function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+</script>
+
 </body>
 </html>
