@@ -332,25 +332,26 @@
 
     let riesgo = '';
 
-    if (encuesta === 'apgar') {
-      if (total <= 4) {
-        riesgo = 'Disfunción severa';
-      } else if (total <= 6) {
-        riesgo = 'Disfunción moderada';
-      } else {
-        riesgo = 'Funcionalidad familiar normal';
-      }
-    } else if (encuesta === 'zarit') {
-      if (total < 47) {
-        riesgo = 'Sobrecarga ligera';
-      } else if (total <= 55) {
-        riesgo = 'Sobrecarga moderada';
-      } else {
-        riesgo = 'Sobrecarga intensa';
-      }
-    }
+if (encuesta === 'apgar') {
+  if (total <= 3) {
+    riesgo = 'Disfunción familiar';
+  } else if (total <= 6) {
+    riesgo = 'Funcionalidad moderada';
+  } else {
+    riesgo = 'Alta funcionalidad';
+  }
+} else if (encuesta === 'zarit') {
+  if (total <= 46) {
+    riesgo = 'Ausencia de sobrecarga';
+  } else if (total <= 55) {
+    riesgo = 'Sobrecarga ligera';
+  } else {
+    riesgo = 'Sobrecarga intensa';
+  }
+}
 
-    resultadoDiv.innerHTML = `<p>La puntuación total de la encuesta ${encuesta.toUpperCase()} es: ${total}. Nivel de riesgo: ${riesgo}.</p>`;
+resultadoDiv.innerHTML = `<p>La puntuación total de la encuesta ${encuesta.toUpperCase()} es: ${total}. Nivel de riesgo: ${riesgo}.</p>`;
+
   }
 
   function limpiarEncuesta(encuesta) {
